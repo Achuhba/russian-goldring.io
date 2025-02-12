@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет времени поездки</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bd687709-7c8d-4483-bcf6-f46fd02bc4b6&lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="map.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+
+<body>
+    <a href="index.html">На главную</a>
+    <h1>Расчет времени поездки</h1>
+    <div class="input-group">
+        <label for="fromCity">Город отправления:</label>
+        <select id="fromCity">
+            <option value="Москва">Москва</option>
+            <option value="Сергиев Посад">Сергиев Посад</option>
+            <option value="Переславль-Залесский">Переславль-Залесский</option>
+            <option value="Ростов">Ростов</option>
+            <option value="Ярославль">Ярославль</option>
+            <option value="Кострома">Кострома</option>
+            <option value="Иваново">Иваново</option>
+            <option value="Суздаль">Суздаль</option>
+            <option value="Владимир">Владимир</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="toCity">Город назначения:</label>
+        <select id="toCity">
+            <option value="Москва">Москва</option>
+            <option value="Сергиев Посад">Сергиев Посад</option>
+            <option value="Переславль-Залесский">Переславль-Залесский</option>
+            <option value="Ростов">Ростов</option>
+            <option value="Ярославль">Ярославль</option>
+            <option value="Кострома">Кострома</option>
+            <option value="Иваново">Иваново</option>
+            <option value="Суздаль">Суздаль</option>
+            <option value="Владимир">Владимир</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="speed">Скорость (км/ч):</label>
+        <input type="number" id="speed" placeholder="Введите скорость">
+    </div>
+    <button onclick="calculateTrip()">Рассчитать время</button>
+    <p id="result"></p>
+    <div id="map"></div>
+    <script src="map.js"></script>
+</body>
+
+</html>
